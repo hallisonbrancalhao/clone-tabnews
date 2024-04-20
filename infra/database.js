@@ -1,6 +1,5 @@
 import { Client } from "pg";
 
-
 async function query(queryObject){
   const client = new Client({
     host: process.env.POSTGRES_HOST,
@@ -35,5 +34,5 @@ function getSSLValues(){
     }
   }
 
-  return process.env.NODE_ENV === 'development' ? false : true;
+  return !['development', 'test'].includes(process.env.NODE_ENV);
 }
