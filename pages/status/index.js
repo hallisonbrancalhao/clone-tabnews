@@ -14,7 +14,7 @@ export default function StatusPage() {
       <hr />
       <Database />
     </>
-  )
+  );
 }
 
 function UpdatedAt() {
@@ -23,12 +23,12 @@ function UpdatedAt() {
   });
 
   let updatedAtText = "Carregando...";
-  
+
   if (!isLoading && data) {
     updatedAtText = new Date(data.updated_at).toLocaleString();
   }
 
-  return <div>Última atualização: {updatedAtText}</div>
+  return <div>Última atualização: {updatedAtText}</div>;
 }
 
 function Database() {
